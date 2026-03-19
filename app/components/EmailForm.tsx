@@ -19,7 +19,7 @@ export default function EmailForm({
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const trimmed = email.trim();
     if (!trimmed || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) {
@@ -27,6 +27,16 @@ export default function EmailForm({
       return;
     }
     setError("");
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: trimmed }),
+      });
+      if (!res.ok) throw new Error("Failed");
+    } catch {
+      // Fail silently — still show success to user
+    }
     setSubmitted(true);
   }
 
