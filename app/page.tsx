@@ -513,7 +513,7 @@ export default function Home() {
               Privacy
             </a>
             <a
-              href="mailto:hello@orchardpatch.com"
+              href="mailto:info@orchardpatch.com"
               className="text-sm transition-colors hover:underline"
               style={{ color: "var(--orchard-muted)" }}
             >
