@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --orchard-green: #2d5016;
+  --orchard-green-light: #3a6b1e;
+  --orchard-green-pale: #eef4e8;
+  --orchard-cream: #faf7f2;
+  --orchard-cream-dark: #f0ebe0;
+  --orchard-red: #c0392b;
+  --orchard-red-dark: #a93226;
+  --orchard-text: #1c1c1e;
+  --orchard-muted: #6b7280;
+  --orchard-border: #e0d9cc;
+}
+
+@theme inline {
+  --color-background: var(--orchard-cream);
+  --color-foreground: var(--orchard-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--orchard-cream);
+  color: var(--orchard-text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--orchard-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--orchard-green);
+  border-radius: 3px;
+}
+
+/* Reusable green button style */
+.btn-green {
+  background: var(--orchard-green);
+  color: white;
+  transition: background 0.15s;
+}
+.btn-green:hover {
+  background: var(--orchard-green-light);
+}
