@@ -124,12 +124,9 @@ export default function Home() {
 
           <div className="relative max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-6"><OrchardLogo size={80} /></div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-2">
-              Complete App Visibility.
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-6">
+              See Everything.<br />Patch Anything.<br />Break Nothing.
             </h1>
-            <p className="text-2xl sm:text-3xl font-semibold mb-6" style={{ color: "#a8d878" }}>
-              Current. Across Your Fleet.
-            </p>
             <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-3 leading-relaxed">
               OrchardPatch gives you complete visibility into your managed macOS fleet and keeps it patched —{" "}
               <strong className="text-white font-medium">without touching your MDM.</strong>
