@@ -45,26 +45,17 @@ export default function EmailForm({
       <div
         className="flex items-center gap-3 px-5 py-3 rounded-xl text-sm font-medium"
         style={{
-          background: "var(--orchard-green-pale)",
-          color: "var(--orchard-green)",
-          border: "1px solid #c5dba8",
+          background: "rgba(125,217,74,0.12)",
+          color: "#7dd94a",
+          border: "1px solid rgba(125,217,74,0.3)",
+          backdropFilter: "blur(20px)",
+          WebkitBackdropFilter: "blur(20px)",
         }}
       >
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 18 18"
-          fill="none"
-          aria-hidden="true"
-        >
-          <circle cx="9" cy="9" r="9" fill="#2d5016" />
-          <path
-            d="M5 9.5l2.5 2.5 5-5"
-            stroke="#fff"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <circle cx="9" cy="9" r="9" fill="#7dd94a" fillOpacity="0.25" />
+          <circle cx="9" cy="9" r="9" stroke="#7dd94a" strokeWidth="1" />
+          <path d="M5 9.5l2.5 2.5 5-5" stroke="#7dd94a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
         You&apos;re on the list! We&apos;ll be in touch.
       </div>
@@ -89,9 +80,7 @@ export default function EmailForm({
       noValidate
       aria-label="Email signup form"
     >
-      <div
-        className="flex flex-col gap-3 items-center w-full"
-      >
+      <div className="flex flex-col gap-3 items-center w-full">
         <input
           type="email"
           value={email}
@@ -102,10 +91,9 @@ export default function EmailForm({
           placeholder={placeholder}
           className={inputClass}
           style={{
-            background: "white",
-            border: `1.5px solid ${error ? "var(--orchard-red)" : "var(--orchard-border)"}`,
-            color: "var(--orchard-text)",
-            boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+            background: "rgba(255,255,255,0.08)",
+            border: `1px solid ${error ? "rgba(255,100,100,0.6)" : "rgba(255,255,255,0.2)"}`,
+            color: "#f0f8ec",
           }}
           aria-label="Email address"
           aria-describedby={error ? `${id}-error` : undefined}
@@ -114,15 +102,9 @@ export default function EmailForm({
         <button
           type="submit"
           className={buttonClass}
-          style={{
-            background: "var(--orchard-green)",
-          }}
-          onMouseEnter={(e) =>
-            (e.currentTarget.style.background = "var(--orchard-green-light)")
-          }
-          onMouseLeave={(e) =>
-            (e.currentTarget.style.background = "var(--orchard-green)")
-          }
+          style={{ background: "#5aaa28" }}
+          onMouseEnter={(e) => (e.currentTarget.style.background = "#6abf32")}
+          onMouseLeave={(e) => (e.currentTarget.style.background = "#5aaa28")}
         >
           {buttonLabel}
         </button>
@@ -131,7 +113,7 @@ export default function EmailForm({
         <p
           id={`${id}-error`}
           className="mt-2 text-xs"
-          style={{ color: "var(--orchard-red)" }}
+          style={{ color: "rgba(255,100,100,0.9)" }}
           role="alert"
         >
           {error}
