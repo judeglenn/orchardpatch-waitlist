@@ -124,7 +124,7 @@ export default function Home() {
         <section className="relative overflow-hidden pt-24 pb-16 px-6">
           <div className="relative max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6" style={{ color: "#f0f8ec" }}>
-              See Everything.<br />Patch Anything.<br />Break Nothing.
+              Full Fleet Visibility.<br />Effortless Patching.
             </h1>
             <p className="text-lg sm:text-xl max-w-2xl mx-auto mb-3 leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
               OrchardPatch gives you complete visibility into your managed macOS fleet and keeps it patched —{" "}
