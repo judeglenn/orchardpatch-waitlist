@@ -203,7 +203,7 @@ export default function Home() {
                 {
                   icon: <IconShield />,
                   heading: "MDM-Safe Patching",
-                  body: "A lightweight agent handles patching at the system level — no Secure Token, no MDM conflicts, no sudo tricks. Works on standard users. Guaranteed.",
+                  body: "A lightweight agent handles patching at the system level — no Secure Token, no MDM conflicts, no sudo tricks. Works on standard users, even in BeyondTrust environments.",
                 },
               ].map(({ icon, heading, body }) => (
                 <div key={heading} className="p-6 flex flex-col gap-4" style={solutionCard}>
@@ -251,7 +251,7 @@ export default function Home() {
                   step: "3",
                   icon: <IconPatch />,
                   heading: "Patch with One Click",
-                  body: "Choose Silent, Managed, or User Prompted. Hit Deploy. OrchardPatch handles the rest — powered by Installomator, 1,100+ supported apps.",
+                  body: "Choose Silent, Managed, or User Prompted. Hit Deploy. OrchardPatch handles the rest — powered by Installomator, 1,000+ supported apps.",
                 },
               ].map(({ step, icon, heading, body }) => (
                 <div key={step} className="flex flex-col items-center text-center gap-4">
@@ -291,7 +291,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-3 gap-6 text-center px-8 py-8" style={glassCard}>
               {[
-                { stat: "1,100+", label: "apps supported via Installomator" },
+                { stat: "1,000+", label: "apps supported via Installomator" },
                 { stat: "3 modes", label: "Silent · Managed · User Prompted" },
                 { stat: "0 MDM", label: "conflicts, ever" },
               ].map(({ stat, label }) => (
