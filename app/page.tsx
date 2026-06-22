@@ -130,7 +130,7 @@ export default function Home() {
       <main className="flex-1">
 
         {/* ── Hero ── */}
-        <section className="relative overflow-hidden pt-24 pb-16 px-6" style={{ background: "#e8e8e8" }}>
+        <section className="relative overflow-hidden pt-16 pb-12 px-6" style={{ background: "#e8e8e8" }}>
           <div className="relative max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6" style={{ color: "#1d1d1f" }}>
               Full Fleet Visibility.<br />Effortless Patching.
@@ -216,7 +216,7 @@ export default function Home() {
                 },
               ].map(({ icon, heading, body }) => (
                 <div key={heading} className="p-7 flex flex-col gap-4" style={solutionCard}>
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#e8e8e8", border: "1px solid #c5c5c7" }}>
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#ffffff", border: "1px solid #d2d2d7" }}>
                     {icon}
                   </div>
                   <div>
