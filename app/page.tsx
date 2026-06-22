@@ -165,9 +165,9 @@ export default function Home() {
             <div className="text-center mb-14">
               <span style={pillLabel}>The Problem</span>
               <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight" style={{ color: "#1d1d1f" }}>
-                You manage the fleet. But how much of it can you actually see?
+                Admins need a complete picture of what&apos;s installed across their fleet.
               </h2>
-              <p className="mt-3 text-base" style={{ color: "#6e6e73" }}>Most admins can&apos;t answer that fully. Not because they missed something. Because no tool was built to show them.</p>
+              <p className="mt-3 text-base" style={{ color: "#6e6e73" }}>Most don&apos;t have one. Not because they missed something. Because no tool was built to show them.</p>
             </div>
 
             <div className="grid sm:grid-cols-3 gap-6">
