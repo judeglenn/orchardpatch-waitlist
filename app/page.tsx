@@ -471,7 +471,7 @@ export default function Home() {
               <p className="text-sm" style={{ color: "#6e6e73" }}>When you sign up, we collect your email address and fleet size if you provide it.</p>
               <p className="text-sm" style={{ color: "#6e6e73" }}>We use this to contact you when early access to OrchardPatch opens up. Nothing else.</p>
               <p className="text-sm" style={{ color: "#6e6e73" }}>No spam. No selling your data. No sharing with third parties.</p>
-              <p className="text-sm" style={{ color: "#6e6e73" }}>To have your data removed, email <a href="mailto:jude@orchardpatch.com" style={{ color: "#2d6e1f" }}>jude@orchardpatch.com</a>.</p>
+              <p className="text-sm" style={{ color: "#6e6e73" }}>To have your data removed, email <a href="mailto:info@orchardpatch.com" style={{ color: "#2d6e1f" }}>info@orchardpatch.com</a>.</p>
             </div>
           </div>
         </>
