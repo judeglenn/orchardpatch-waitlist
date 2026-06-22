@@ -228,7 +228,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-base mb-1.5" style={{ color: "#2d6e1f" }}>Software Catalog</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "#6e6e73" }}>Browse 1,000+ apps and deploy any of them to any device in your fleet, even ones not currently installed. Powered by Installomator.</p>
+                  <p className="text-sm leading-relaxed" style={{ color: "#6e6e73" }}>Browse 1,000+ apps and deploy any of them to any device in your fleet, even ones not currently installed. No scripting, no command line. Powered by Installomator.</p>
                 </div>
               </div>
 
