@@ -378,27 +378,9 @@ export default function Home() {
               <div>
                 <p className="text-sm font-semibold mb-0.5" style={{ color: "#1d1d1f" }}>Built for enterprise, including hardened environments</p>
                 <p className="text-sm" style={{ color: "#6e6e73" }}>
-                  The agent LaunchDaemon runs at the system level, the same pattern used by Jamf, Mosyle, and Kandji. No admin rights needed. Works in privilege-managed environments.
+                  The agent LaunchDaemon runs at the system level, following the same deployment pattern as your existing MDM. No admin rights needed. Works in privilege-managed environments.
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── Stats strip ── */}
-        <section className="py-12 px-6" style={{ background: "#e8e8e8" }}>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-3 gap-6 text-center px-8 py-8" style={whiteCard}>
-              {[
-                { stat: "1,000+", label: "apps supported via Installomator" },
-                { stat: "3 modes", label: "Silent · Managed · User Prompted" },
-                { stat: "0 MDM", label: "conflicts, ever" },
-              ].map(({ stat, label }) => (
-                <div key={stat}>
-                  <div className="text-2xl sm:text-3xl font-bold mb-1" style={{ color: "#1d1d1f" }}>{stat}</div>
-                  <div className="text-xs sm:text-sm" style={{ color: "#6e6e73" }}>{label}</div>
-                </div>
-              ))}
             </div>
           </div>
         </section>
