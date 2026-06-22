@@ -266,7 +266,7 @@ export default function Home() {
               <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight" style={{ color: "#1d1d1f" }}>
                 You control the scope.
               </h2>
-              <p className="mt-3 text-base" style={{ color: "#6e6e73" }}>Patch one thing or your entire fleet. OrchardPatch handles both without breaking a sweat.</p>
+              <p className="mt-3 text-base" style={{ color: "#6e6e73" }}>One app on one device to your entire fleet.</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
