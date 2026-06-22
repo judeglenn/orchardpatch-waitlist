@@ -173,15 +173,15 @@ export default function Home() {
             <div className="grid sm:grid-cols-3 gap-6">
               {[
                 {
-                  heading: "Fleet app visibility was never MDMs\u2019 job",
+                  heading: "Fleet app visibility was never MDMs’ job",
                   body: "MDMs track what you enrolled. Apps that arrived via download, script, or user install are invisible unless you already knew to look. Most fleets have gaps no one has seen.",
                 },
                 {
                   heading: "Most patching tools create MDM conflicts",
-                  body: "They demand Secure Token access and wrestle Apple MDM for device ownership, creating conflicts and breaking standard-user environments. There shouldn\u2019t be a tradeoff.",
+                  body: "They demand Secure Token access and wrestle Apple MDM for device ownership, creating conflicts and breaking standard-user environments. There shouldn’t be a tradeoff.",
                 },
                 {
-                  heading: "Rolling your own doesn\u2019t scale",
+                  heading: "Rolling your own doesn’t scale",
                   body: "Patch scripts get you started. Maintaining them across macOS updates, app version changes, and edge cases becomes its own full-time job.",
                 },
               ].map(({ heading, body }) => (
