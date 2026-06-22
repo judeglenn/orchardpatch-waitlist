@@ -165,24 +165,24 @@ export default function Home() {
             <div className="text-center mb-14">
               <span style={pillLabel}>The Problem</span>
               <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight" style={{ color: "#1d1d1f" }}>
-                Admins deserve complete fleet-wide app visibility
+                You&apos;re accountable for every app on every Mac. Can you see them all?
               </h2>
-              <p className="mt-3 text-base" style={{ color: "#6e6e73" }}>Most tools leave you flying blind.</p>
+              <p className="mt-3 text-base" style={{ color: "#6e6e73" }}>Most admins can&apos;t. Not because they missed something. Because no tool was built to show them.</p>
             </div>
 
             <div className="grid sm:grid-cols-3 gap-6">
               {[
                 {
-                  heading: "Your MDM only sees what you told it to watch",
-                  body: "Miss an app during setup? It's invisible. Forget a Smart Group? Compliance gap. New software appears on devices? You won't know until something breaks.",
+                  heading: "Fleet app visibility was never MDMs\u2019 job",
+                  body: "MDMs track what you enrolled. Apps that arrived via download, script, or user install are invisible unless you already knew to look. Most fleets have gaps no one has seen.",
                 },
                 {
-                  heading: "Third-party patching tools fight with your MDM",
-                  body: "Most patching tools demand Secure Token access and wrestle Apple MDM for device ownership, creating conflicts, support nightmares, and breaking standard-user environments.",
+                  heading: "Most patching tools create MDM conflicts",
+                  body: "They demand Secure Token access and wrestle Apple MDM for device ownership, creating conflicts and breaking standard-user environments. There shouldn\u2019t be a tradeoff.",
                 },
                 {
-                  heading: "DIY scripting is a second full-time job",
-                  body: "Rolling your own means weeks of scripting before you see anything useful. Then maintaining it forever while it quietly breaks on every macOS update.",
+                  heading: "Rolling your own doesn\u2019t scale",
+                  body: "Patch scripts get you started. Maintaining them across macOS updates, app version changes, and edge cases becomes its own full-time job.",
                 },
               ].map(({ heading, body }) => (
                 <div key={heading} className="p-7" style={whiteCard}>
