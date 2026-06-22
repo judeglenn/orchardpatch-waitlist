@@ -1,10 +1,10 @@
 # OrchardPatch — Waitlist Landing Page
 
-A static waitlist landing page for OrchardPatch, built with Next.js 14 (App Router), TypeScript, and Tailwind CSS.
+A static waitlist landing page for OrchardPatch, built with Next.js 16.2.0 (App Router), TypeScript, and Tailwind CSS.
 
 ## Stack
 
-- **Next.js 14** (App Router, static export ready)
+- **Next.js 16.2.0** (App Router, static export ready)
 - **TypeScript**
 - **Tailwind CSS v4**
 - Client-side email capture (no backend required)

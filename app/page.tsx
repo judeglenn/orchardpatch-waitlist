@@ -131,7 +131,7 @@ export default function Home() {
               <strong style={{ color: "#f0f8ec", fontWeight: 500 }}>without touching your MDM.</strong>
             </p>
             <p className="text-sm mb-10 italic" style={{ color: "rgba(255,255,255,0.35)" }}>
-              Your MDM handles enrollment. OrchardPatch handles visibility and compliance from there.
+              Your MDM handles enrollment. OrchardPatch handles visibility and patching from there.
             </p>
             <div className="flex justify-center w-full mb-6 max-w-sm mx-auto">
               <EmailForm id="hero-form" buttonLabel="Get Early Access" size="large" />
@@ -193,12 +193,12 @@ export default function Home() {
                 {
                   icon: <IconSparkle />,
                   heading: "Automatic Discovery",
-                  body: "See every app on every device the moment it appears. No manual setup, no catalog to configure. If it's installed, you know about it.",
+                  body: "No manual app lists. OrchardPatch discovers every installed app automatically, powered by Installomator\u2019s 1,000+ app labels.",
                 },
                 {
                   icon: <IconBrain />,
-                  heading: "Fleet Intelligence",
-                  body: "Version conflicts, rogue installs, compliance gaps — surfaced automatically with actionable insight so you can act before users notice.",
+                  heading: "Fleet Visibility",
+                  body: "See every app installed across your entire fleet \u2014 not just what your MDM was told to track. Catch drift before it becomes a problem.",
                 },
                 {
                   icon: <IconShield />,
@@ -310,10 +310,10 @@ export default function Home() {
           <div className="relative max-w-2xl mx-auto text-center">
             <div className="px-8 py-12" style={glassCard}>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4" style={{ color: "#f0f8ec" }}>
-                Be first to know when OrchardPatch launches.
+                OrchardPatch is in active development.
               </h2>
               <p className="text-base mb-10 max-w-lg mx-auto" style={{ color: "rgba(255,255,255,0.55)" }}>
-                Join Mac admins who&apos;ve had enough of cobbling together patch workflows. Early access is limited.
+                Early fleets are running now. We&apos;re opening access gradually \u2014 join the list and we&apos;ll reach out when your spot is ready.
               </p>
               <EmailForm id="cta-form" buttonLabel="Join the Waitlist" placeholder="your@email.com" size="large" />
               <p className="mt-5 text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>No spam. No marketing fluff. Just a heads-up when it&apos;s ready.</p>

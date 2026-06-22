@@ -16,6 +16,7 @@ export default function EmailForm({
   size = "default",
 }: EmailFormProps) {
   const [email, setEmail] = useState("");
+  const [fleetSize, setFleetSize] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
@@ -31,7 +32,7 @@ export default function EmailForm({
       const res = await fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed }),
+        body: JSON.stringify({ email: trimmed, fleetSize }),
       });
       if (!res.ok) throw new Error("Failed");
     } catch {
@@ -57,7 +58,7 @@ export default function EmailForm({
           <circle cx="9" cy="9" r="9" stroke="#7dd94a" strokeWidth="1" />
           <path d="M5 9.5l2.5 2.5 5-5" stroke="#7dd94a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-        You&apos;re on the list! We&apos;ll be in touch.
+        You&apos;re on the list. OrchardPatch is in active development with early fleets running now. We&apos;ll reach out as access opens up.
       </div>
     );
   }
@@ -71,6 +72,11 @@ export default function EmailForm({
     size === "large"
       ? "shrink-0 px-6 py-3.5 rounded-xl text-base font-semibold text-white transition-colors cursor-pointer w-full"
       : "shrink-0 px-5 py-3 rounded-xl text-sm font-semibold text-white transition-colors cursor-pointer w-full";
+
+  const selectClass =
+    size === "large"
+      ? "w-full px-4 py-3.5 rounded-xl text-base outline-none transition-shadow appearance-none cursor-pointer"
+      : "w-full px-4 py-3 rounded-xl text-sm outline-none transition-shadow appearance-none cursor-pointer";
 
   return (
     <form
@@ -99,6 +105,36 @@ export default function EmailForm({
           aria-describedby={error ? `${id}-error` : undefined}
           autoComplete="email"
         />
+        <div className="w-full">
+          <label
+            htmlFor={`${id}-fleet-size`}
+            className="block text-xs mb-1.5"
+            style={{ color: "rgba(255,255,255,0.45)" }}
+          >
+            How many Macs do you manage? (optional)
+          </label>
+          <select
+            id={`${id}-fleet-size`}
+            value={fleetSize}
+            onChange={(e) => setFleetSize(e.target.value)}
+            className={selectClass}
+            style={{
+              background: "rgba(255,255,255,0.08)",
+              border: "1px solid rgba(255,255,255,0.2)",
+              color: fleetSize ? "#f0f8ec" : "rgba(255,255,255,0.35)",
+            }}
+            aria-label="Fleet size"
+          >
+            <option value="" style={{ background: "#0d1f08", color: "rgba(255,255,255,0.55)" }}>
+              Select a range...
+            </option>
+            <option value="1-10" style={{ background: "#0d1f08", color: "#f0f8ec" }}>1–10</option>
+            <option value="11-50" style={{ background: "#0d1f08", color: "#f0f8ec" }}>11–50</option>
+            <option value="51-200" style={{ background: "#0d1f08", color: "#f0f8ec" }}>51–200</option>
+            <option value="201-1,000" style={{ background: "#0d1f08", color: "#f0f8ec" }}>201–1,000</option>
+            <option value="1,000+" style={{ background: "#0d1f08", color: "#f0f8ec" }}>1,000+</option>
+          </select>
+        </div>
         <button
           type="submit"
           className={buttonClass}
