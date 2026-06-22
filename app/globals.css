@@ -7,9 +7,9 @@
   --orchard-text: #1d1d1f;
   --orchard-text-secondary: #6e6e73;
   --orchard-text-muted: #6e6e73;
-  --orchard-bg: #f5f5f7;
+  --orchard-bg: #e8e8e8;
   --orchard-card-bg: #ffffff;
-  --orchard-card-border: #d2d2d7;
+  --orchard-card-border: #c5c5c7;
   --orchard-card-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  background: #f5f5f7;
+  background: #e8e8e8;
   min-height: 100vh;
   color: var(--orchard-text);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
@@ -40,10 +40,10 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #f5f5f7;
+  background: #e8e8e8;
 }
 ::-webkit-scrollbar-thumb {
-  background: #d2d2d7;
+  background: #c5c5c7;
   border-radius: 3px;
 }
 
@@ -58,7 +58,7 @@ body {
 
 .white-card {
   background: #ffffff;
-  border: 1px solid #d2d2d7;
+  border: 1px solid #c5c5c7;
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-  border-radius: 20px;
+  border-radius: 24px;
 }

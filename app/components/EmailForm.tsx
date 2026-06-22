@@ -96,7 +96,7 @@ export default function EmailForm({
           className={inputClass}
           style={{
             background: "#ffffff",
-            border: `1px solid ${error ? "rgba(200,50,50,0.6)" : "#d2d2d7"}`,
+            border: `1px solid ${error ? "rgba(200,50,50,0.6)" : "#c5c5c7"}`,
             color: "#1d1d1f",
           }}
           aria-label="Email address"
@@ -118,7 +118,7 @@ export default function EmailForm({
             className={selectClass}
             style={{
               background: "#ffffff",
-              border: "1px solid #d2d2d7",
+              border: "1px solid #c5c5c7",
               color: fleetSize ? "#1d1d1f" : "#6e6e73",
             }}
             aria-label="Fleet size"

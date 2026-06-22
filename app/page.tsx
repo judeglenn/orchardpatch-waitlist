@@ -83,16 +83,16 @@ function IconPatch() {
 
 const whiteCard: React.CSSProperties = {
   background: "#ffffff",
-  border: "1px solid #d2d2d7",
+  border: "1px solid #c5c5c7",
   boxShadow: "0 1px 3px rgba(0,0,0,0.08)",
-  borderRadius: "20px",
+  borderRadius: "24px",
 };
 
 const solutionCard: React.CSSProperties = {
   background: "#ffffff",
-  border: "1px solid #d2d2d7",
+  border: "1px solid #c5c5c7",
   boxShadow: "0 1px 3px rgba(0,0,0,0.08)",
-  borderRadius: "20px",
+  borderRadius: "24px",
 };
 
 const pillLabel: React.CSSProperties = {
@@ -110,7 +110,7 @@ const pillLabel: React.CSSProperties = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen" style={{ background: "#f5f5f7" }}>
+    <div className="flex flex-col min-h-screen" style={{ background: "#e8e8e8" }}>
 
       {/* ── Nav ── */}
       <header className="sticky top-0 z-50" style={{ background: "#ffffff", borderBottom: "1px solid #d2d2d7" }}>
@@ -130,13 +130,13 @@ export default function Home() {
       <main className="flex-1">
 
         {/* ── Hero ── */}
-        <section className="relative overflow-hidden pt-24 pb-16 px-6" style={{ background: "#f5f5f7" }}>
+        <section className="relative overflow-hidden pt-24 pb-16 px-6" style={{ background: "#e8e8e8" }}>
           <div className="relative max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6" style={{ color: "#1d1d1f" }}>
               Full Fleet Visibility.<br />Effortless Patching.
             </h1>
             <p className="text-lg sm:text-xl max-w-2xl mx-auto mb-3 leading-relaxed" style={{ color: "#6e6e73" }}>
-              OrchardPatch gives you complete visibility into your managed macOS fleet and keeps it patched —{" "}
+              OrchardPatch gives you complete visibility into your managed macOS fleet and keeps it patched{" "}
               <strong style={{ color: "#1d1d1f", fontWeight: 500 }}>without touching your MDM.</strong>
             </p>
             <p className="text-sm mb-10 italic" style={{ color: "#6e6e73" }}>
@@ -149,7 +149,7 @@ export default function Home() {
         </section>
 
         {/* ── The Problem ── */}
-        <section className="py-20 px-6" style={{ background: "#f5f5f7" }}>
+        <section className="py-20 px-6" style={{ background: "#e8e8e8" }}>
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-14">
               <span style={pillLabel}>The Problem</span>
@@ -174,7 +174,7 @@ export default function Home() {
                   body: "Rolling your own means weeks of scripting before you see anything useful. Then maintaining it forever while it quietly breaks on every macOS update.",
                 },
               ].map(({ heading, body }) => (
-                <div key={heading} className="p-6" style={whiteCard}>
+                <div key={heading} className="p-7" style={whiteCard}>
                   <div className="mb-4"><IconWarning /></div>
                   <h3 className="font-semibold text-base mb-2" style={{ color: "#1d1d1f" }}>{heading}</h3>
                   <p className="text-sm leading-relaxed" style={{ color: "#6e6e73" }}>{body}</p>
@@ -184,10 +184,10 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="max-w-5xl mx-auto px-6"><div style={{ height: "1px", background: "#d2d2d7" }} /></div>
+        <div className="max-w-5xl mx-auto px-6"><div style={{ height: "1px", background: "#c5c5c7" }} /></div>
 
         {/* ── The Solution ── */}
-        <section className="py-20 px-6" style={{ background: "#f5f5f7" }}>
+        <section className="py-20 px-6" style={{ background: "#e8e8e8" }}>
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-14">
               <span style={pillLabel}>The Solution</span>
@@ -215,8 +215,8 @@ export default function Home() {
                   body: "Patching runs at the system level. No Secure Token required, no MDM conflicts, no admin rights needed. Works on standard user accounts in privilege-managed environments.",
                 },
               ].map(({ icon, heading, body }) => (
-                <div key={heading} className="p-6 flex flex-col gap-4" style={solutionCard}>
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#f5f5f7", border: "1px solid #d2d2d7" }}>
+                <div key={heading} className="p-7 flex flex-col gap-4" style={solutionCard}>
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#e8e8e8", border: "1px solid #c5c5c7" }}>
                     {icon}
                   </div>
                   <div>
@@ -265,7 +265,7 @@ export default function Home() {
               ].map(({ step, icon, heading, body }) => (
                 <div key={step} className="flex flex-col items-center text-center gap-4">
                   <div className="relative">
-                    <div className="w-20 h-20 rounded-2xl flex items-center justify-center" style={{ background: "#f5f5f7", border: "1px solid #d2d2d7", boxShadow: "0 1px 3px rgba(0,0,0,0.06)" }}>
+                    <div className="w-20 h-20 rounded-2xl flex items-center justify-center" style={{ background: "#ffffff", border: "1px solid #d2d2d7", boxShadow: "0 1px 3px rgba(0,0,0,0.08)" }}>
                       {icon}
                     </div>
                     <span className="absolute -top-2.5 -right-2.5 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ background: "#5aaa28" }}>
@@ -281,8 +281,8 @@ export default function Home() {
             </div>
 
             {/* Trust note */}
-            <div className="mt-14 px-6 py-5 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left" style={whiteCard}>
-              <div className="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#f5f5f7", border: "1px solid #d2d2d7" }}>
+            <div className="mt-14 px-7 py-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left" style={whiteCard}>
+              <div className="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#e8e8e8", border: "1px solid #c5c5c7" }}>
                 <IconShield />
               </div>
               <div>
@@ -296,7 +296,7 @@ export default function Home() {
         </section>
 
         {/* ── Stats strip ── */}
-        <section className="py-12 px-6" style={{ background: "#f5f5f7" }}>
+        <section className="py-12 px-6" style={{ background: "#e8e8e8" }}>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-3 gap-6 text-center px-8 py-8" style={whiteCard}>
               {[
@@ -323,7 +323,7 @@ export default function Home() {
               <p className="text-base mb-10 max-w-lg mx-auto" style={{ color: "#6e6e73" }}>
                 Early fleets are running now. Join the list and we&apos;ll reach out when your spot is ready.
               </p>
-              <EmailForm id="cta-form" buttonLabel="Join the Waitlist" placeholder="your@email.com" size="large" />
+              <EmailForm id="cta-form" buttonLabel="Get Early Access" placeholder="your@email.com" size="large" />
               <p className="mt-5 text-xs" style={{ color: "#6e6e73" }}>No spam. No marketing fluff. Just a heads-up when it&apos;s ready.</p>
             </div>
           </div>
