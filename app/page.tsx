@@ -81,6 +81,26 @@ function IconPatch() {
   );
 }
 
+function IconGrid() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+      <rect x="3" y="3" width="7" height="7" rx="1.5" stroke="#7dd94a" strokeWidth="1.5" fill="none" />
+      <rect x="12" y="3" width="7" height="7" rx="1.5" stroke="#7dd94a" strokeWidth="1.5" fill="none" />
+      <rect x="3" y="12" width="7" height="7" rx="1.5" stroke="#7dd94a" strokeWidth="1.5" fill="none" />
+      <rect x="12" y="12" width="7" height="7" rx="1.5" stroke="#7dd94a" strokeWidth="1.5" fill="none" />
+    </svg>
+  );
+}
+
+function IconClock() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+      <circle cx="11" cy="11" r="8" stroke="#6e6e73" strokeWidth="1.5" fill="none" />
+      <path d="M11 7V11.5L14 13.5" stroke="#6e6e73" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 const whiteCard: React.CSSProperties = {
   background: "#ffffff",
   border: "1px solid #c5c5c7",
@@ -197,34 +217,55 @@ export default function Home() {
               <p className="mt-3 text-base" style={{ color: "#6e6e73" }}>OrchardPatch works alongside your existing MDM. Not against it.</p>
             </div>
 
-            <div className="grid sm:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: <IconSparkle />,
-                  heading: "Automatic Discovery",
-                  body: "No manual app lists. The agent finds every app installed on every Mac at check-in, including ones your MDM has never seen.",
-                },
-                {
-                  icon: <IconBrain />,
-                  heading: "Fleet Visibility",
-                  body: "See every app installed across your entire fleet, not just what your MDM was told to track. Catch drift before it becomes a problem.",
-                },
-                {
-                  icon: <IconShield />,
-                  heading: "MDM-Safe Patching",
-                  body: "Patching runs at the system level. No Secure Token required, no MDM conflicts, no admin rights needed. Works on standard user accounts in privilege-managed environments.",
-                },
-              ].map(({ icon, heading, body }) => (
-                <div key={heading} className="p-7 flex flex-col gap-4" style={solutionCard}>
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#ffffff", border: "1px solid #d2d2d7" }}>
-                    {icon}
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-base mb-1.5" style={{ color: "#2d6e1f" }}>{heading}</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: "#6e6e73" }}>{body}</p>
-                  </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+              {/* Card 1: Fleet Visibility */}
+              <div className="p-7 flex flex-col gap-4" style={solutionCard}>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#ffffff", border: "1px solid #d2d2d7" }}>
+                  <IconBrain />
                 </div>
-              ))}
+                <div>
+                  <h3 className="font-semibold text-base mb-1.5" style={{ color: "#2d6e1f" }}>Fleet Visibility</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#6e6e73" }}>The agent discovers every app on every Mac at check-in, including ones your MDM has never seen. See your entire fleet in one place.</p>
+                </div>
+              </div>
+
+              {/* Card 2: Software Catalog */}
+              <div className="p-7 flex flex-col gap-4" style={solutionCard}>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#ffffff", border: "1px solid #d2d2d7" }}>
+                  <IconGrid />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-base mb-1.5" style={{ color: "#2d6e1f" }}>Software Catalog</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#6e6e73" }}>Browse 1,000+ apps and deploy any of them to any device in your fleet, even ones not currently installed. Powered by Installomator.</p>
+                </div>
+              </div>
+
+              {/* Card 3: MDM-Safe Patching */}
+              <div className="p-7 flex flex-col gap-4" style={solutionCard}>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#ffffff", border: "1px solid #d2d2d7" }}>
+                  <IconShield />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-base mb-1.5" style={{ color: "#2d6e1f" }}>MDM-Safe Patching</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#6e6e73" }}>Patching runs at the system level. No Secure Token required, no MDM conflicts, no admin rights needed. Works on standard user accounts in privilege-managed environments.</p>
+                </div>
+              </div>
+
+              {/* Card 4: Cultivation (Coming Soon) */}
+              <div className="p-7 flex flex-col gap-4" style={solutionCard}>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#ffffff", border: "1px solid #d2d2d7" }}>
+                  <IconClock />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <h3 className="font-semibold text-base" style={{ color: "#6e6e73" }}>Cultivation</h3>
+                    <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: "#e0e0e0", color: "#6e6e73" }}>Coming Soon</span>
+                  </div>
+                  <p className="text-sm leading-relaxed" style={{ color: "#6e6e73" }}>Set compliance policies, define patch windows, and let OrchardPatch handle automated remediation across your fleet.</p>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
