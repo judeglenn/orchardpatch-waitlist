@@ -386,7 +386,7 @@ export default function Home() {
         </section>
 
         {/* ── Second CTA ── */}
-        <section id="waitlist" className="py-24 px-6 relative overflow-hidden" style={{ background: "#e8e8e8" }}>
+        <section id="waitlist" className="py-24 px-6 relative overflow-hidden" style={{ background: "#ffffff" }}>
           <div className="relative max-w-2xl mx-auto text-center">
             <div className="px-8 py-12" style={whiteCard}>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4" style={{ color: "#1d1d1f" }}>
