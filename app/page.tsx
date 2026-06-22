@@ -81,6 +81,16 @@ function IconPatch() {
   );
 }
 
+function IconMonitor() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+      <rect x="2" y="3" width="18" height="12" rx="2" stroke="#7dd94a" strokeWidth="1.5" fill="none" />
+      <path d="M8 19H14" stroke="#7dd94a" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M11 15V19" stroke="#7dd94a" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 function IconGrid() {
   return (
     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
@@ -243,6 +253,67 @@ export default function Home() {
                 </div>
               </div>
 
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── Patch Granularity ── */}
+        <section className="py-20 px-6" style={{ background: "#ffffff" }}>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-14">
+              <span style={pillLabel}>Patch Granularity</span>
+              <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight" style={{ color: "#1d1d1f" }}>
+                You control the scope.
+              </h2>
+              <p className="mt-3 text-base" style={{ color: "#6e6e73" }}>Patch one thing or your entire fleet. OrchardPatch handles both without breaking a sweat.</p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+              {/* Card 1: One app, one device */}
+              <div className="p-7 flex flex-col gap-4" style={whiteCard}>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#ffffff", border: "1px solid #d2d2d7" }}>
+                  <IconMonitor />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-base mb-1.5" style={{ color: "#2d6e1f" }}>One app, one device</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#6e6e73" }}>Something is outdated on a specific Mac. Patch just that. Nothing else touched.</p>
+                </div>
+              </div>
+
+              {/* Card 2: One app, entire fleet */}
+              <div className="p-7 flex flex-col gap-4" style={whiteCard}>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#ffffff", border: "1px solid #d2d2d7" }}>
+                  <IconGrid />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-base mb-1.5" style={{ color: "#2d6e1f" }}>One app, your entire fleet</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#6e6e73" }}>Push one app update to every Mac at once. Consistent versions across the fleet.</p>
+                </div>
+              </div>
+
+              {/* Card 3: All outdated, one device */}
+              <div className="p-7 flex flex-col gap-4" style={whiteCard}>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#ffffff", border: "1px solid #d2d2d7" }}>
+                  <IconShield />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-base mb-1.5" style={{ color: "#2d6e1f" }}>All outdated apps, one device</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#6e6e73" }}>Catch up a single machine in one operation. Every outdated app handled.</p>
+                </div>
+              </div>
+
+              {/* Card 4: Everything, everywhere */}
+              <div className="p-7 flex flex-col gap-4" style={whiteCard}>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#ffffff", border: "1px solid #d2d2d7" }}>
+                  <IconDiscover />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-base mb-1.5" style={{ color: "#2d6e1f" }}>Everything, everywhere</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#6e6e73" }}>Full fleet remediation. Every outdated app on every device, in one go.</p>
+                </div>
+              </div>
 
             </div>
           </div>
