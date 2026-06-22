@@ -170,7 +170,7 @@ export default function Home() {
         </section>
 
         {/* ── The Problem ── */}
-        <section className="py-20 px-6" style={{ background: "#e8e8e8" }}>
+        <section className="py-20 px-6" style={{ background: "#ffffff" }}>
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-14">
               <span style={pillLabel}>The Problem</span>
@@ -320,7 +320,7 @@ export default function Home() {
         </section>
 
         {/* ── How It Works ── */}
-        <section className="py-20 px-6" style={{ background: "#ffffff" }}>
+        <section className="py-20 px-6" style={{ background: "#e8e8e8" }}>
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-14">
               <span style={pillLabel}>How It Works</span>
@@ -386,7 +386,7 @@ export default function Home() {
         </section>
 
         {/* ── Second CTA ── */}
-        <section id="waitlist" className="py-24 px-6 relative overflow-hidden" style={{ background: "#ffffff" }}>
+        <section id="waitlist" className="py-24 px-6 relative overflow-hidden" style={{ background: "#e8e8e8" }}>
           <div className="relative max-w-2xl mx-auto text-center">
             <div className="px-8 py-12" style={whiteCard}>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4" style={{ color: "#1d1d1f" }}>
@@ -404,7 +404,7 @@ export default function Home() {
       </main>
 
       {/* ── Footer ── */}
-      <footer className="px-6 py-10" style={{ borderTop: "1px solid #d2d2d7", background: "#f5f5f7" }}>
+      <footer className="px-6 py-10" style={{ borderTop: "1px solid #d2d2d7", background: "#e8e8e8" }}>
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a href="#" className="text-sm" aria-label="OrchardPatch">
