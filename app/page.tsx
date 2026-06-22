@@ -134,6 +134,7 @@ const pillLabel: React.CSSProperties = {
 
 export default function Home() {
   const [privacyOpen, setPrivacyOpen] = useState(false);
+  const [contactCopied, setContactCopied] = useState(false);
 
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
@@ -428,7 +429,23 @@ export default function Home() {
           </div>
           <nav className="flex items-center gap-6" aria-label="Footer links">
             <button onClick={() => setPrivacyOpen(true)} className="text-sm transition-colors hover:underline cursor-pointer" style={{ color: "#6e6e73", background: "none", border: "none", padding: 0 }}>Privacy</button>
-            <a href="mailto:info@orchardpatch.com" className="text-sm transition-colors hover:underline" style={{ color: "#6e6e73" }}>Contact</a>
+            <span className="relative">
+              {contactCopied && (
+                <span className="absolute -top-7 left-1/2 -translate-x-1/2 text-xs text-white px-2 py-1 rounded-md pointer-events-none whitespace-nowrap" style={{ background: "#1d1d1f" }}>
+                  Copied!
+                </span>
+              )}
+              <a
+                href="mailto:info@orchardpatch.com"
+                className="text-sm transition-colors hover:underline"
+                style={{ color: "#6e6e73" }}
+                onClick={() => {
+                  navigator.clipboard.writeText("info@orchardpatch.com");
+                  setContactCopied(true);
+                  setTimeout(() => setContactCopied(false), 2000);
+                }}
+              >Contact</a>
+            </span>
           </nav>
         </div>
       </footer>
