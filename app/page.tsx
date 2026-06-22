@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import EmailForm from "./components/EmailForm";
 
 function Wordmark() {
@@ -130,6 +133,16 @@ const pillLabel: React.CSSProperties = {
 };
 
 export default function Home() {
+  const [privacyOpen, setPrivacyOpen] = useState(false);
+
+  useEffect(() => {
+    function handleKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setPrivacyOpen(false);
+    }
+    if (privacyOpen) document.addEventListener("keydown", handleKey);
+    return () => document.removeEventListener("keydown", handleKey);
+  }, [privacyOpen]);
+
   return (
     <div className="flex flex-col min-h-screen" style={{ background: "#e8e8e8" }}>
 
@@ -414,11 +427,56 @@ export default function Home() {
             <span className="text-sm" style={{ color: "#6e6e73" }}>Built for Mac admins, by a Mac admin.</span>
           </div>
           <nav className="flex items-center gap-6" aria-label="Footer links">
-            <a href="#" className="text-sm transition-colors hover:underline" style={{ color: "#6e6e73" }}>Privacy</a>
+            <button onClick={() => setPrivacyOpen(true)} className="text-sm transition-colors hover:underline cursor-pointer" style={{ color: "#6e6e73", background: "none", border: "none", padding: 0 }}>Privacy</button>
             <a href="mailto:info@orchardpatch.com" className="text-sm transition-colors hover:underline" style={{ color: "#6e6e73" }}>Contact</a>
           </nav>
         </div>
       </footer>
+      {/* ── Privacy Popover ── */}
+      {privacyOpen && (
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 z-40"
+            onClick={() => setPrivacyOpen(false)}
+            aria-hidden="true"
+          />
+          {/* Card */}
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="privacy-heading"
+            className="fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full mx-4 p-8"
+            style={{
+              maxWidth: "28rem",
+              background: "#ffffff",
+              border: "1px solid #c5c5c7",
+              borderRadius: "24px",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+            }}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setPrivacyOpen(false)}
+              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full transition-colors"
+              style={{ background: "#f0f0f0", border: "none", cursor: "pointer", color: "#1d1d1f" }}
+              aria-label="Close privacy notice"
+            >
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M1 1L11 11M11 1L1 11" stroke="#1d1d1f" strokeWidth="1.5" strokeLinecap="round" />
+              </svg>
+            </button>
+            <h2 id="privacy-heading" className="text-lg font-semibold mb-5" style={{ color: "#1d1d1f" }}>Privacy Notice</h2>
+            <div className="flex flex-col gap-3">
+              <p className="text-sm" style={{ color: "#6e6e73" }}>When you sign up, we collect your email address and fleet size if you provide it.</p>
+              <p className="text-sm" style={{ color: "#6e6e73" }}>We use this to contact you when early access to OrchardPatch opens up. Nothing else.</p>
+              <p className="text-sm" style={{ color: "#6e6e73" }}>No spam. No selling your data. No sharing with third parties.</p>
+              <p className="text-sm" style={{ color: "#6e6e73" }}>To have your data removed, email <a href="mailto:jude@orchardpatch.com" style={{ color: "#2d6e1f" }}>jude@orchardpatch.com</a>.</p>
+            </div>
+          </div>
+        </>
+      )}
+
     </div>
   );
 }
