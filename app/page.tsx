@@ -193,12 +193,12 @@ export default function Home() {
                 {
                   icon: <IconSparkle />,
                   heading: "Automatic Discovery",
-                  body: "No manual app lists. OrchardPatch discovers every installed app automatically, powered by Installomator\u2019s 1,000+ app labels.",
+                  body: "No manual app lists. OrchardPatch discovers every installed app automatically, powered by Installomator’s 1,000+ app labels.",
                 },
                 {
                   icon: <IconBrain />,
                   heading: "Fleet Visibility",
-                  body: "See every app installed across your entire fleet \u2014 not just what your MDM was told to track. Catch drift before it becomes a problem.",
+                  body: "See every app installed across your entire fleet — not just what your MDM was told to track. Catch drift before it becomes a problem.",
                 },
                 {
                   icon: <IconShield />,
@@ -313,7 +313,7 @@ export default function Home() {
                 OrchardPatch is in active development.
               </h2>
               <p className="text-base mb-10 max-w-lg mx-auto" style={{ color: "rgba(255,255,255,0.55)" }}>
-                Early fleets are running now. We&apos;re opening access gradually \u2014 join the list and we&apos;ll reach out when your spot is ready.
+                Early fleets are running now. Join the list and we’ll reach out when your spot is ready.
               </p>
               <EmailForm id="cta-form" buttonLabel="Join the Waitlist" placeholder="your@email.com" size="large" />
               <p className="mt-5 text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>No spam. No marketing fluff. Just a heads-up when it&apos;s ready.</p>
