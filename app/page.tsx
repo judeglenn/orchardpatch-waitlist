@@ -104,8 +104,8 @@ const pillLabel: React.CSSProperties = {
   padding: "4px 12px",
   borderRadius: "9999px",
   border: "none",
-  background: "#e0e0e0",
-  color: "#1d1d1f",
+  background: "#1d1d1f",
+  color: "#ffffff",
 };
 
 export default function Home() {

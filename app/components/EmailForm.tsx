@@ -136,9 +136,9 @@ export default function EmailForm({
         <button
           type="submit"
           className={buttonClass}
-          style={{ background: "#5aaa28" }}
-          onMouseEnter={(e) => (e.currentTarget.style.background = "#6abf32")}
-          onMouseLeave={(e) => (e.currentTarget.style.background = "#5aaa28")}
+          style={{ background: "#4a7c2f" }}
+          onMouseEnter={(e) => (e.currentTarget.style.background = "#5a9438")}
+          onMouseLeave={(e) => (e.currentTarget.style.background = "#4a7c2f")}
         >
           {buttonLabel}
         </button>
