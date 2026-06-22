@@ -103,8 +103,8 @@ const pillLabel: React.CSSProperties = {
   letterSpacing: "0.1em",
   padding: "4px 12px",
   borderRadius: "9999px",
-  border: "1px solid #d2d2d7",
-  background: "transparent",
+  border: "none",
+  background: "#e0e0e0",
   color: "#1d1d1f",
 };
 
@@ -220,7 +220,7 @@ export default function Home() {
                     {icon}
                   </div>
                   <div>
-                    <h3 className="font-semibold text-base mb-1.5" style={{ color: "#7dd94a" }}>{heading}</h3>
+                    <h3 className="font-semibold text-base mb-1.5" style={{ color: "#2d6e1f" }}>{heading}</h3>
                     <p className="text-sm leading-relaxed" style={{ color: "#6e6e73" }}>{body}</p>
                   </div>
                 </div>
