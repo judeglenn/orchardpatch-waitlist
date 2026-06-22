@@ -46,11 +46,9 @@ export default function EmailForm({
       <div
         className="flex items-center gap-3 px-5 py-3 rounded-xl text-sm font-medium"
         style={{
-          background: "rgba(125,217,74,0.12)",
-          color: "#7dd94a",
-          border: "1px solid rgba(125,217,74,0.3)",
-          backdropFilter: "blur(20px)",
-          WebkitBackdropFilter: "blur(20px)",
+          background: "rgba(90,170,40,0.08)",
+          color: "#5aaa28",
+          border: "1px solid rgba(90,170,40,0.3)",
         }}
       >
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -97,9 +95,9 @@ export default function EmailForm({
           placeholder={placeholder}
           className={inputClass}
           style={{
-            background: "rgba(255,255,255,0.08)",
-            border: `1px solid ${error ? "rgba(255,100,100,0.6)" : "rgba(255,255,255,0.2)"}`,
-            color: "#f0f8ec",
+            background: "#ffffff",
+            border: `1px solid ${error ? "rgba(200,50,50,0.6)" : "#d2d2d7"}`,
+            color: "#1d1d1f",
           }}
           aria-label="Email address"
           aria-describedby={error ? `${id}-error` : undefined}
@@ -109,7 +107,7 @@ export default function EmailForm({
           <label
             htmlFor={`${id}-fleet-size`}
             className="block text-xs mb-1.5"
-            style={{ color: "rgba(255,255,255,0.45)" }}
+            style={{ color: "#6e6e73" }}
           >
             How many Macs do you manage? (optional)
           </label>
@@ -119,20 +117,20 @@ export default function EmailForm({
             onChange={(e) => setFleetSize(e.target.value)}
             className={selectClass}
             style={{
-              background: "rgba(255,255,255,0.08)",
-              border: "1px solid rgba(255,255,255,0.2)",
-              color: fleetSize ? "#f0f8ec" : "rgba(255,255,255,0.35)",
+              background: "#ffffff",
+              border: "1px solid #d2d2d7",
+              color: fleetSize ? "#1d1d1f" : "#6e6e73",
             }}
             aria-label="Fleet size"
           >
-            <option value="" style={{ background: "#0d1f08", color: "rgba(255,255,255,0.55)" }}>
+            <option value="" style={{ background: "#ffffff", color: "#6e6e73" }}>
               Select a range...
             </option>
-            <option value="1-10" style={{ background: "#0d1f08", color: "#f0f8ec" }}>1–10</option>
-            <option value="11-50" style={{ background: "#0d1f08", color: "#f0f8ec" }}>11–50</option>
-            <option value="51-200" style={{ background: "#0d1f08", color: "#f0f8ec" }}>51–200</option>
-            <option value="201-1,000" style={{ background: "#0d1f08", color: "#f0f8ec" }}>201–1,000</option>
-            <option value="1,000+" style={{ background: "#0d1f08", color: "#f0f8ec" }}>1,000+</option>
+            <option value="1-10" style={{ background: "#ffffff", color: "#1d1d1f" }}>1–10</option>
+            <option value="11-50" style={{ background: "#ffffff", color: "#1d1d1f" }}>11–50</option>
+            <option value="51-200" style={{ background: "#ffffff", color: "#1d1d1f" }}>51–200</option>
+            <option value="201-1,000" style={{ background: "#ffffff", color: "#1d1d1f" }}>201–1,000</option>
+            <option value="1,000+" style={{ background: "#ffffff", color: "#1d1d1f" }}>1,000+</option>
           </select>
         </div>
         <button
@@ -149,7 +147,7 @@ export default function EmailForm({
         <p
           id={`${id}-error`}
           className="mt-2 text-xs"
-          style={{ color: "rgba(255,100,100,0.9)" }}
+          style={{ color: "rgba(200,50,50,0.9)" }}
           role="alert"
         >
           {error}

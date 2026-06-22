@@ -3,7 +3,7 @@ import EmailForm from "./components/EmailForm";
 function Wordmark() {
   return (
     <span style={{ fontSize: "inherit", lineHeight: "inherit" }}>
-      <span style={{ color: "#f0f8ec", fontWeight: 700, letterSpacing: "-0.02em" }}>Orchard</span>
+      <span style={{ color: "#1d1d1f", fontWeight: 700, letterSpacing: "-0.02em" }}>Orchard</span>
       <span style={{ color: "#7dd94a", fontWeight: 700 }}>Patch</span>
     </span>
   );
@@ -12,9 +12,9 @@ function Wordmark() {
 function IconWarning() {
   return (
     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-      <path d="M11 2L20.5 19H1.5L11 2Z" stroke="rgba(255,80,80,0.8)" strokeWidth="1.5" strokeLinejoin="round" fill="none" />
-      <path d="M11 9V13" stroke="rgba(255,80,80,0.8)" strokeWidth="1.5" strokeLinecap="round" />
-      <circle cx="11" cy="16" r="0.75" fill="rgba(255,80,80,0.8)" />
+      <path d="M11 2L20.5 19H1.5L11 2Z" stroke="rgba(220,60,60,0.8)" strokeWidth="1.5" strokeLinejoin="round" fill="none" />
+      <path d="M11 9V13" stroke="rgba(220,60,60,0.8)" strokeWidth="1.5" strokeLinecap="round" />
+      <circle cx="11" cy="16" r="0.75" fill="rgba(220,60,60,0.8)" />
     </svg>
   );
 }
@@ -81,30 +81,39 @@ function IconPatch() {
   );
 }
 
-const glassCard: React.CSSProperties = {
-  background: "rgba(255,255,255,0.06)",
-  backdropFilter: "blur(20px)",
-  WebkitBackdropFilter: "blur(20px)",
-  border: "1px solid rgba(255,255,255,0.12)",
-  boxShadow: "0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.08)",
+const whiteCard: React.CSSProperties = {
+  background: "#ffffff",
+  border: "1px solid #d2d2d7",
+  boxShadow: "0 1px 3px rgba(0,0,0,0.08)",
   borderRadius: "20px",
 };
 
 const solutionCard: React.CSSProperties = {
-  background: "rgba(125,217,74,0.08)",
-  backdropFilter: "blur(20px)",
-  WebkitBackdropFilter: "blur(20px)",
-  border: "1px solid rgba(125,217,74,0.2)",
-  boxShadow: "0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)",
+  background: "#ffffff",
+  border: "1px solid #d2d2d7",
+  boxShadow: "0 1px 3px rgba(0,0,0,0.08)",
   borderRadius: "20px",
+};
+
+const pillLabel: React.CSSProperties = {
+  display: "inline-block",
+  fontSize: "0.75rem",
+  fontWeight: 600,
+  textTransform: "uppercase",
+  letterSpacing: "0.1em",
+  padding: "4px 12px",
+  borderRadius: "9999px",
+  border: "1px solid #d2d2d7",
+  background: "transparent",
+  color: "#1d1d1f",
 };
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen" style={{ background: "#f5f5f7" }}>
 
       {/* ── Nav ── */}
-      <header className="sticky top-0 z-50" style={{ background: "rgba(8,15,5,0.75)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+      <header className="sticky top-0 z-50" style={{ background: "#ffffff", borderBottom: "1px solid #d2d2d7" }}>
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
           <a href="#" className="text-base" aria-label="OrchardPatch home">
             <Wordmark />
@@ -121,16 +130,16 @@ export default function Home() {
       <main className="flex-1">
 
         {/* ── Hero ── */}
-        <section className="relative overflow-hidden pt-24 pb-16 px-6">
+        <section className="relative overflow-hidden pt-24 pb-16 px-6" style={{ background: "#f5f5f7" }}>
           <div className="relative max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6" style={{ color: "#f0f8ec" }}>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6" style={{ color: "#1d1d1f" }}>
               Full Fleet Visibility.<br />Effortless Patching.
             </h1>
-            <p className="text-lg sm:text-xl max-w-2xl mx-auto mb-3 leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
+            <p className="text-lg sm:text-xl max-w-2xl mx-auto mb-3 leading-relaxed" style={{ color: "#6e6e73" }}>
               OrchardPatch gives you complete visibility into your managed macOS fleet and keeps it patched —{" "}
-              <strong style={{ color: "#f0f8ec", fontWeight: 500 }}>without touching your MDM.</strong>
+              <strong style={{ color: "#1d1d1f", fontWeight: 500 }}>without touching your MDM.</strong>
             </p>
-            <p className="text-sm mb-10 italic" style={{ color: "rgba(255,255,255,0.35)" }}>
+            <p className="text-sm mb-10 italic" style={{ color: "#6e6e73" }}>
               Your MDM handles enrollment. OrchardPatch handles visibility and patching from there.
             </p>
             <div className="flex justify-center w-full mb-6 max-w-sm mx-auto">
@@ -140,14 +149,14 @@ export default function Home() {
         </section>
 
         {/* ── The Problem ── */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6" style={{ background: "#f5f5f7" }}>
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-14">
-              <span className="text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full" style={{ color: "rgba(255,80,80,0.8)", background: "rgba(255,80,80,0.1)", border: "1px solid rgba(255,80,80,0.2)" }}>The Problem</span>
-              <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight" style={{ color: "#f0f8ec" }}>
+              <span style={pillLabel}>The Problem</span>
+              <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight" style={{ color: "#1d1d1f" }}>
                 Admins deserve complete fleet-wide app visibility
               </h2>
-              <p className="mt-3 text-base" style={{ color: "rgba(255,255,255,0.55)" }}>Most tools leave you flying blind.</p>
+              <p className="mt-3 text-base" style={{ color: "#6e6e73" }}>Most tools leave you flying blind.</p>
             </div>
 
             <div className="grid sm:grid-cols-3 gap-6">
@@ -158,34 +167,34 @@ export default function Home() {
                 },
                 {
                   heading: "Third-party patching tools fight with your MDM",
-                  body: "Most patching tools demand Secure Token access and wrestle Apple MDM for device ownership — creating conflicts, support nightmares, and breaking standard-user environments.",
+                  body: "Most patching tools demand Secure Token access and wrestle Apple MDM for device ownership, creating conflicts, support nightmares, and breaking standard-user environments.",
                 },
                 {
                   heading: "DIY scripting is a second full-time job",
-                  body: "Rolling your own means weeks of scripting before you see anything useful — then maintaining it forever while it quietly breaks on every macOS update.",
+                  body: "Rolling your own means weeks of scripting before you see anything useful. Then maintaining it forever while it quietly breaks on every macOS update.",
                 },
               ].map(({ heading, body }) => (
-                <div key={heading} className="p-6" style={glassCard}>
+                <div key={heading} className="p-6" style={whiteCard}>
                   <div className="mb-4"><IconWarning /></div>
-                  <h3 className="font-semibold text-base mb-2" style={{ color: "#f0f8ec" }}>{heading}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{body}</p>
+                  <h3 className="font-semibold text-base mb-2" style={{ color: "#1d1d1f" }}>{heading}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#6e6e73" }}>{body}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <div className="max-w-5xl mx-auto px-6"><div style={{ height: "1px", background: "rgba(255,255,255,0.08)" }} /></div>
+        <div className="max-w-5xl mx-auto px-6"><div style={{ height: "1px", background: "#d2d2d7" }} /></div>
 
         {/* ── The Solution ── */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6" style={{ background: "#f5f5f7" }}>
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-14">
-              <span className="text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full" style={{ color: "#7dd94a", background: "rgba(125,217,74,0.1)", border: "1px solid rgba(125,217,74,0.25)" }}>The Solution</span>
-              <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight" style={{ color: "#f0f8ec" }}>
+              <span style={pillLabel}>The Solution</span>
+              <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight" style={{ color: "#1d1d1f" }}>
                 Full visibility. Smart patching. Zero friction.
               </h2>
-              <p className="mt-3 text-base" style={{ color: "rgba(255,255,255,0.55)" }}>OrchardPatch works alongside your existing MDM — not against it.</p>
+              <p className="mt-3 text-base" style={{ color: "#6e6e73" }}>OrchardPatch works alongside your existing MDM. Not against it.</p>
             </div>
 
             <div className="grid sm:grid-cols-3 gap-6">
@@ -193,26 +202,26 @@ export default function Home() {
                 {
                   icon: <IconSparkle />,
                   heading: "Automatic Discovery",
-                  body: "No manual app lists. OrchardPatch discovers every installed app automatically, powered by Installomator’s 1,000+ app labels.",
+                  body: "No manual app lists. The agent finds every app installed on every Mac at check-in, including ones your MDM has never seen.",
                 },
                 {
                   icon: <IconBrain />,
                   heading: "Fleet Visibility",
-                  body: "See every app installed across your entire fleet — not just what your MDM was told to track. Catch drift before it becomes a problem.",
+                  body: "See every app installed across your entire fleet, not just what your MDM was told to track. Catch drift before it becomes a problem.",
                 },
                 {
                   icon: <IconShield />,
                   heading: "MDM-Safe Patching",
-                  body: "A lightweight agent handles patching at the system level — no Secure Token, no MDM conflicts, no sudo tricks. Works on standard users, even in BeyondTrust environments.",
+                  body: "Patching runs at the system level. No Secure Token required, no MDM conflicts, no admin rights needed. Works on standard user accounts in privilege-managed environments.",
                 },
               ].map(({ icon, heading, body }) => (
                 <div key={heading} className="p-6 flex flex-col gap-4" style={solutionCard}>
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)" }}>
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#f5f5f7", border: "1px solid #d2d2d7" }}>
                     {icon}
                   </div>
                   <div>
                     <h3 className="font-semibold text-base mb-1.5" style={{ color: "#7dd94a" }}>{heading}</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{body}</p>
+                    <p className="text-sm leading-relaxed" style={{ color: "#6e6e73" }}>{body}</p>
                   </div>
                 </div>
               ))}
@@ -221,14 +230,14 @@ export default function Home() {
         </section>
 
         {/* ── How It Works ── */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6" style={{ background: "#ffffff" }}>
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-14">
-              <span className="text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full" style={{ color: "#7dd94a", background: "rgba(125,217,74,0.1)", border: "1px solid rgba(125,217,74,0.25)" }}>How It Works</span>
-              <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight" style={{ color: "#f0f8ec" }}>
+              <span style={pillLabel}>How It Works</span>
+              <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight" style={{ color: "#1d1d1f" }}>
                 Up and running in minutes
               </h2>
-              <p className="mt-3 text-base" style={{ color: "rgba(255,255,255,0.55)" }}>
+              <p className="mt-3 text-base" style={{ color: "#6e6e73" }}>
                 One pkg. One install. Your fleet in view.
               </p>
             </div>
@@ -239,7 +248,7 @@ export default function Home() {
                   step: "1",
                   icon: <IconPkg />,
                   heading: "Deploy the Agent",
-                  body: "Install the OrchardPatch agent pkg via Jamf, your MDM, or by hand. It installs a lightweight LaunchDaemon — runs as root, works on standard users, no sudo required.",
+                  body: "Deploy via Jamf, your MDM, or directly on each Mac. The agent runs as a LaunchDaemon. No admin rights needed on managed machines.",
                 },
                 {
                   step: "2",
@@ -251,12 +260,12 @@ export default function Home() {
                   step: "3",
                   icon: <IconPatch />,
                   heading: "Patch with One Click",
-                  body: "Choose Silent, Managed, or User Prompted. Hit Deploy. OrchardPatch handles the rest — powered by Installomator, 1,000+ supported apps.",
+                  body: "Choose Silent, Managed, or User Prompted. Hit Deploy. OrchardPatch handles the rest, powered by Installomator with 1,000+ supported apps.",
                 },
               ].map(({ step, icon, heading, body }) => (
                 <div key={step} className="flex flex-col items-center text-center gap-4">
                   <div className="relative">
-                    <div className="w-20 h-20 rounded-2xl flex items-center justify-center" style={{ background: "rgba(255,255,255,0.06)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", border: "1px solid rgba(255,255,255,0.12)", boxShadow: "0 4px 16px rgba(0,0,0,0.3)" }}>
+                    <div className="w-20 h-20 rounded-2xl flex items-center justify-center" style={{ background: "#f5f5f7", border: "1px solid #d2d2d7", boxShadow: "0 1px 3px rgba(0,0,0,0.06)" }}>
                       {icon}
                     </div>
                     <span className="absolute -top-2.5 -right-2.5 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ background: "#5aaa28" }}>
@@ -264,22 +273,22 @@ export default function Home() {
                     </span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-base mb-1.5" style={{ color: "#f0f8ec" }}>{heading}</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{body}</p>
+                    <h3 className="font-semibold text-base mb-1.5" style={{ color: "#1d1d1f" }}>{heading}</h3>
+                    <p className="text-sm leading-relaxed" style={{ color: "#6e6e73" }}>{body}</p>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Trust note */}
-            <div className="mt-14 px-6 py-5 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left" style={glassCard}>
-              <div className="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)" }}>
+            <div className="mt-14 px-6 py-5 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left" style={whiteCard}>
+              <div className="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#f5f5f7", border: "1px solid #d2d2d7" }}>
                 <IconShield />
               </div>
               <div>
-                <p className="text-sm font-semibold mb-0.5" style={{ color: "#7dd94a" }}>Built for enterprise — even hardened ones</p>
-                <p className="text-sm" style={{ color: "rgba(255,255,255,0.55)" }}>
-                  Works in BeyondTrust and similar privilege-management environments. No admin rights needed. No sudo. The agent LaunchDaemon runs at system level — same pattern used by Jamf, Mosyle, and Kandji.
+                <p className="text-sm font-semibold mb-0.5" style={{ color: "#1d1d1f" }}>Built for enterprise, including hardened environments</p>
+                <p className="text-sm" style={{ color: "#6e6e73" }}>
+                  The agent LaunchDaemon runs at the system level, the same pattern used by Jamf, Mosyle, and Kandji. No admin rights needed. Works in privilege-managed environments.
                 </p>
               </div>
             </div>
@@ -287,17 +296,17 @@ export default function Home() {
         </section>
 
         {/* ── Stats strip ── */}
-        <section className="py-12 px-6">
+        <section className="py-12 px-6" style={{ background: "#f5f5f7" }}>
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-3 gap-6 text-center px-8 py-8" style={glassCard}>
+            <div className="grid grid-cols-3 gap-6 text-center px-8 py-8" style={whiteCard}>
               {[
                 { stat: "1,000+", label: "apps supported via Installomator" },
                 { stat: "3 modes", label: "Silent · Managed · User Prompted" },
                 { stat: "0 MDM", label: "conflicts, ever" },
               ].map(({ stat, label }) => (
                 <div key={stat}>
-                  <div className="text-2xl sm:text-3xl font-bold mb-1" style={{ color: "#7dd94a" }}>{stat}</div>
-                  <div className="text-xs sm:text-sm" style={{ color: "rgba(255,255,255,0.55)" }}>{label}</div>
+                  <div className="text-2xl sm:text-3xl font-bold mb-1" style={{ color: "#1d1d1f" }}>{stat}</div>
+                  <div className="text-xs sm:text-sm" style={{ color: "#6e6e73" }}>{label}</div>
                 </div>
               ))}
             </div>
@@ -305,18 +314,17 @@ export default function Home() {
         </section>
 
         {/* ── Second CTA ── */}
-        <section id="waitlist" className="py-24 px-6 relative overflow-hidden">
-          <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "radial-gradient(ellipse 60% 80% at 50% 60%, rgba(45,120,20,0.35) 0%, transparent 65%)" }} />
+        <section id="waitlist" className="py-24 px-6 relative overflow-hidden" style={{ background: "#ffffff" }}>
           <div className="relative max-w-2xl mx-auto text-center">
-            <div className="px-8 py-12" style={glassCard}>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4" style={{ color: "#f0f8ec" }}>
+            <div className="px-8 py-12" style={whiteCard}>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4" style={{ color: "#1d1d1f" }}>
                 OrchardPatch is in active development.
               </h2>
-              <p className="text-base mb-10 max-w-lg mx-auto" style={{ color: "rgba(255,255,255,0.55)" }}>
-                Early fleets are running now. Join the list and we’ll reach out when your spot is ready.
+              <p className="text-base mb-10 max-w-lg mx-auto" style={{ color: "#6e6e73" }}>
+                Early fleets are running now. Join the list and we&apos;ll reach out when your spot is ready.
               </p>
               <EmailForm id="cta-form" buttonLabel="Join the Waitlist" placeholder="your@email.com" size="large" />
-              <p className="mt-5 text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>No spam. No marketing fluff. Just a heads-up when it&apos;s ready.</p>
+              <p className="mt-5 text-xs" style={{ color: "#6e6e73" }}>No spam. No marketing fluff. Just a heads-up when it&apos;s ready.</p>
             </div>
           </div>
         </section>
@@ -324,18 +332,18 @@ export default function Home() {
       </main>
 
       {/* ── Footer ── */}
-      <footer className="px-6 py-10" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+      <footer className="px-6 py-10" style={{ borderTop: "1px solid #d2d2d7", background: "#f5f5f7" }}>
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a href="#" className="text-sm" aria-label="OrchardPatch">
               <Wordmark />
             </a>
-            <span className="hidden sm:inline text-sm" style={{ color: "rgba(255,255,255,0.2)" }}>·</span>
-            <span className="text-sm" style={{ color: "rgba(255,255,255,0.35)" }}>Built for Mac admins, by a Mac admin.</span>
+            <span className="hidden sm:inline text-sm" style={{ color: "#d2d2d7" }}>·</span>
+            <span className="text-sm" style={{ color: "#6e6e73" }}>Built for Mac admins, by a Mac admin.</span>
           </div>
           <nav className="flex items-center gap-6" aria-label="Footer links">
-            <a href="#" className="text-sm transition-colors hover:underline" style={{ color: "rgba(255,255,255,0.35)" }}>Privacy</a>
-            <a href="mailto:info@orchardpatch.com" className="text-sm transition-colors hover:underline" style={{ color: "rgba(255,255,255,0.35)" }}>Contact</a>
+            <a href="#" className="text-sm transition-colors hover:underline" style={{ color: "#6e6e73" }}>Privacy</a>
+            <a href="mailto:info@orchardpatch.com" className="text-sm transition-colors hover:underline" style={{ color: "#6e6e73" }}>Contact</a>
           </nav>
         </div>
       </footer>
